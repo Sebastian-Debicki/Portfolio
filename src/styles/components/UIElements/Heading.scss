@@ -1,0 +1,62 @@
+.heading {
+  grid-column: 2/-1;
+
+  &__primary {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 1rem 2rem rgba($color-black, .3);
+
+    &-main {
+      display: block;
+      font-size: 4.7rem;
+      color: $color-grey-light-1;
+      font-weight: 900;
+      line-height: 1.1;
+
+
+      @include respond(tab-land) {
+        font-size: 5.5rem;
+      }
+
+      @include respond(desktop) {
+        font-size: 6rem;
+      }
+    }
+
+    &-sub {
+      display: block;
+      font-size: 2rem;
+      text-align: right;
+      color: $color-grey-dark-1;
+      position: relative;
+      font-weight: 400;
+      letter-spacing: 1px;
+      animation: sub-title-color infinite 1.5s;
+
+      @include respond(tab-land) {
+        font-size: 2.5rem;
+      }
+
+      @include respond(desktop) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &__secondary {
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: $color-grey-light-1;
+  }
+
+  &__tertiary {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    color: $color-grey-light-1;
+  }
+}

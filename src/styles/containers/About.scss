@@ -1,0 +1,54 @@
+.about {
+  grid-column: 2/-1;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50vh max-content;
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    grid-template-rows: 100% max-content;
+  }
+
+  &__technologies {
+    background-color: $color-primary;
+    padding: 2rem;
+    position: relative;
+    grid-column: 1/-1;
+
+    @include respond(tab-port) {
+      grid-column: 1;
+      padding: 4rem;
+    }
+  }
+
+  &__text {
+    grid-column: 1/-1;
+    position: relative;
+    padding: 2rem;
+
+    @include respond(tab-port) {
+      grid-column: 2;
+      padding: 4rem;
+    }
+
+    &__paragraph {
+      font-size: 1.7rem;
+      margin-bottom: 4rem;
+
+      @include respond(tab-port) {
+        font-size: 1.9rem;
+      }
+    }
+
+    &__picture {
+      width: 100%;
+      min-height: 50rem;
+      background-image: linear-gradient(to bottom, rgba($color-primary-light, 0) 70%, rgba($color-primary-light, 1)), url('../../assets/images/my-picture.JPG');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.projects {
+  grid-column: 2/-1;
+  padding: 2rem;
+
+  @include respond(tab-port) {
+    padding: 6rem;
+  }
+}

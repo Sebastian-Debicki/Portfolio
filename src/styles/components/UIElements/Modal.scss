@@ -1,0 +1,12 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background-color: $color-primary;
+  z-index: 201;
+  opacity: 0;
+  min-width: 38rem;
+  max-width: 70rem;
+  animation: move-in-modal 0.35s forwards ease-out;
+}

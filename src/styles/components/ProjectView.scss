@@ -1,0 +1,33 @@
+.project-view {
+  padding: 2rem;
+
+  @include respond(tab-land) {
+    padding: 4rem;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  &__technologies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+
+    &__item {
+      list-style: none;
+      font-size: 1.4rem;
+      padding: 1.5rem;
+    }
+
+    &__icon {
+      display: block;
+      margin: 0 auto;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}

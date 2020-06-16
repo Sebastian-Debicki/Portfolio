@@ -1,0 +1,93 @@
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+
+  &__primary {
+    padding: 2rem 5rem;
+    background-color: $color-primary-light;
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: .3s;
+
+    &:hover {
+      background-color: lighten($color-primary-light, 5%);
+      box-shadow: 0 .8rem 1.5rem rgba($color-black, .3);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      box-shadow: 0 .3rem .8rem rgba($color-black, .3);
+      transform: translateY(0);
+    }
+  }
+
+
+  &__special {
+    &--dots {
+      display: block;
+      font-size: 3rem;
+      color: $color-grey-dark-1;
+      border: 2px solid $color-grey-dark-1;
+      border-radius: 100%;
+      width: 4rem;
+      height: 4rem;
+      position: relative;
+      margin: 0 auto;
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform .4s .1s, opacity .4s .1s, color .3s, border .3s, box-shadow .3s;
+      box-shadow: 0 .5rem 1.5rem rgba($color-black, .3);
+
+      @include respond(tab-port) {
+        opacity: 0;
+        transform: translateY(-2rem);
+      }
+
+      &:hover {
+        border: 2px solid $color-grey-light-1;
+        color: $color-grey-light-1;
+        box-shadow: 0 1rem 2.5rem rgba($color-black, .4);
+      }
+
+      &__dot {
+        position: absolute;
+        top: -18%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:nth-of-type(1) {
+          left: 28%;
+          animation: bounding-dot 1.3s .3s infinite linear;
+        }
+
+        &:nth-of-type(2) {
+          animation: bounding-dot 1.3s .6s infinite linear;
+        }
+
+        &:nth-of-type(3) {
+          left: 72%;
+          animation: bounding-dot 1.3s .9s infinite linear;
+        }
+      }
+    }
+
+    &--close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      font-size: 4.5rem;
+      transform: rotate(45deg);
+      color: $color-grey-dark-1;
+      padding: 0 1rem;
+      transition: .3s;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.input-box {
+  position: relative;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 1.3rem;
+  margin: 1.5rem 0;
+  font-family: $font-primary;
+  border: 2px solid transparent;
+  background-color: $color-primary-light;
+  color: $color-grey-light-1;
+  transition: .5s;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $color-success;
+    background-color: lighten($color-primary-light, 2%);
+  }
+
+  &:focus:invalid {
+    border-bottom: 2px solid $color-danger;
+  }
+
+  &:valid {
+    background-color: $color-primary-light;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 2.5rem;
+  left: 1.3rem;
+  transform: translateY(-3.5rem);
+  transition: all .3s ease-in-out;
+  font-size: 1.3rem;
+  color: darken($color-grey-light-1, 20%);
+}
+
+.input:placeholder-shown+.label {
+  opacity: 0;
+  transform: translateY(-2rem);
+
+}

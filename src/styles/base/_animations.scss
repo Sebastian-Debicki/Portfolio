@@ -1,0 +1,49 @@
+@keyframes bounding-dot {
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  30% {
+    transform: translate(-50%, -.3rem);
+  }
+
+  60% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes move-in-modal {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sent-icon-show {
+
+  0% {
+    fill: $color-primary;
+  }
+
+  40% {
+    fill: $color-success;
+  }
+
+  60% {
+    fill: $color-success;
+  }
+
+  100% {
+    fill: $color-primary;
+  }
+}

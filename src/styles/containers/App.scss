@@ -1,0 +1,8 @@
+.layout {
+
+  @include respond(phone-large) {
+    display: grid;
+    grid-template-columns: 7rem 1fr 1fr;
+  }
+
+}

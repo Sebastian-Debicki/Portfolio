@@ -1,0 +1,55 @@
+.navigation {
+  width: 7rem;
+  transform: translate(-7rem);
+  height: 100%;
+  position: fixed;
+  background-color: $color-primary;
+  transition: transform 0.3s 0.1s ease-in-out;
+  z-index: 110;
+
+  @include respond(phone-large) {
+    transform: translate(0);
+  }
+
+  &__open {
+    transform: translate(0);
+    transition: transform 0.3s 0.1s ease-in-out;
+  }
+
+  &__menu-list {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social-list {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+  }
+
+  &__social-item {
+    list-style: none;
+    margin: 1.5rem 0;
+  }
+
+  &__social-link {
+    padding: 1rem;
+
+    &:hover .navigation__social-icon {
+      fill: $color-grey-light-1;
+    }
+  }
+
+  &__social-icon {
+    fill: $color-grey-dark-1;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: fill .3s;
+  }
+}

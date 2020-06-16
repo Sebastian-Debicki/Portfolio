@@ -1,0 +1,59 @@
+.hamburger {
+  padding: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 120;
+
+  @include respond(phone-large) {
+    display: none;
+  }
+
+  &__box {
+    width: 3rem;
+    height: 2.4rem;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__inner {
+    @include hamburger-line;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .3s ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      @include hamburger-line;
+      left: 0;
+      transition: transform .3s .1s ease-in-out;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &--active &__inner {
+    background-color: transparent;
+  }
+
+  &--active &__inner::before {
+    transform: translateY(1rem) rotate(45deg);
+  }
+
+  &--active &__inner::after {
+    transform: translateY(-1rem) rotate(-45deg);
+  }
+}
