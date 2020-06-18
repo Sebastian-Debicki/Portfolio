@@ -9,7 +9,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  animation: move-out .5s .9s forwards;
 
   &__text {
     &-main {
@@ -32,8 +31,7 @@
     position: relative;
     overflow: hidden;
 
-    &::after {
-      content: "";
+    &__bar {
       position: absolute;
       top: 0;
       left: 0;
@@ -42,20 +40,6 @@
       height: .3rem;
       background-color: $color-grey-light-1;
       transform: translateX(-23rem);
-      animation: progress-move .8s .1s linear;
-      box-shadow: 0 1rem 2rem rgba($color-grey-dark-1, .3);
     }
-  }
-}
-
-@keyframes progress-move {
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes move-out {
-  to {
-    opacity: 0;
   }
 }

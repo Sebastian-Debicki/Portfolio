@@ -8,6 +8,7 @@ const useAppState = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [loadingTimer, setLoadingTimer] = useState(1000);
   const toggleMenuHandler = () => setMenuOpen(!menuOpen);
   const closeMenuHandler = () => setMenuOpen(false);
   const openModalHandler = (project) => {
@@ -20,11 +21,17 @@ const useAppState = () => {
   };
 
   useEffect(() => {
+    const loadingTimerStart = Date.now();
+    setLoading(true);
     axios
       .get(`${process.env.REACT_APP_API_URL}/skills`)
       .then((res) => res)
       .then((resData) => {
         setTechnologies(resData.data.skills);
+        setLoadingTimer(Date.now() - loadingTimerStart + 1000);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1400);
       });
   }, []);
 
@@ -34,10 +41,6 @@ const useAppState = () => {
       .then((data) => setProjects(data.projects));
   }, []);
 
-  setTimeout(() => {
-    setLoading(false);
-  }, 1500);
-
   return {
     projects,
     technologies,
@@ -45,6 +48,7 @@ const useAppState = () => {
     menuOpen,
     modalOpen,
     loading,
+    loadingTimer,
     toggleMenuHandler,
     closeMenuHandler,
     openModalHandler,

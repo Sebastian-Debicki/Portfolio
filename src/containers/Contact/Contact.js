@@ -19,8 +19,6 @@ const Contact = () => {
     showSentMessageIcon,
   } = useContactState();
 
-  console.log(showSentMessageIcon);
-
   return (
     <section className="contact">
       <div className="u-center u-margin-bottom-small contact__heading-box">

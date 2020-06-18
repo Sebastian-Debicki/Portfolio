@@ -20,6 +20,7 @@ const App = () => {
     menuOpen,
     modalOpen,
     loading,
+    loadingTimer,
     toggleMenuHandler,
     closeMenuHandler,
     openModalHandler,
@@ -28,7 +29,7 @@ const App = () => {
 
   return (
     <>
-      {loading && <Spinner />}
+      {loading && <Spinner loadingTimer={loadingTimer} />}
       <Logo />
       <HamburgerButton toggleMenuHandler={toggleMenuHandler} open={menuOpen} />
       <Navigation open={menuOpen} closeMenuHandler={closeMenuHandler} />
@@ -38,8 +39,9 @@ const App = () => {
           <ProjectView project={project} />
         </Modal>
       )}
+
       <main className="layout">
-        <Header />
+        <Header loadingTimer={loadingTimer} />
         <About technologies={technologies} loading={loading} />
         <Projects openModalHandler={openModalHandler} projects={projects} />
         <Contact />
