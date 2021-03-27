@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { projects } from '../../mocks/testsDummyData';
-import { ProjectView } from '../ProjectView';
-import { Heading } from '../Heading';
-import { Slider } from '../Slider';
+import { projects } from '../mocks/projects';
+import { ProjectView } from '../components/ProjectView';
+import { Heading } from '../components/Heading';
+import { Slider } from '../components/Slider';
 
 let wrapper: any;
 beforeEach(() => {

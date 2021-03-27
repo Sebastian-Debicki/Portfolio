@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Modal } from '../Modal';
-import { Backdrop } from '../Backdrop';
-import { Button } from '../Button';
+import { Modal } from '../components/Modal';
+import { Backdrop } from '../components/Backdrop';
+import { Button } from '../components/Button';
 
 let wrapper: any, onCloseMock: any;
 beforeEach(() => {

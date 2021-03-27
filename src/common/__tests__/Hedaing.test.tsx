@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Heading } from '../Heading';
+import { Heading } from '../components/Heading';
 
 let wrapper: any;
 beforeEach(() => {

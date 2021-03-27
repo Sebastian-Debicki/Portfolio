@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from './Header';
-import Heading from '../../components/UIElements/Heading/Heading';
 
-let wrapper;
+import { Header } from '../Header';
+import { Heading } from '../../common/components/Heading';
+
+let wrapper: any;
 beforeEach(() => {
-  wrapper = shallow(<Header />);
+  wrapper = shallow(<Header loadingTimer={1000} />);
 });
 
 describe('<Header/>', () => {

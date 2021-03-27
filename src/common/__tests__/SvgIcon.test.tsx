@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { shallow } from 'enzyme';
-import { SvgIcon } from '../SvgIcon';
+import { SvgIcon } from '../components/SvgIcon';
 
 let wrapper: any;
 beforeEach(() => {

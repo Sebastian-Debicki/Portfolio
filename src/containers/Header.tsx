@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { TimelineMax, Power3, gsap } from 'gsap';
 
-import { Heading } from '../../common/components/Heading';
+import { Heading } from '../common/components/Heading';
 
 gsap.registerPlugin(TimelineMax, Power3);
 

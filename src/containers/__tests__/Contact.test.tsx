@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Contact from './Contact';
-import Heading from '../../components/UIElements/Heading/Heading';
-import Input from '../../components/FormElements/Input/Input';
-import Button from '../../components/FormElements/Button/Button';
 
-let wrapper;
+import { Contact } from '../Contact';
+import { Heading } from '../../common/components/Heading';
+import { Input } from '../../common/components/Input';
+import { Button } from '../../common/components/Button';
+
+let wrapper: any;
 beforeEach(() => {
   wrapper = shallow(<Contact />);
 });

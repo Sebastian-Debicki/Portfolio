@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Navigation } from '../Navigation';
-import { socialMediaItemsData } from '../../data/navigationItems';
+import { Navigation } from '../components/Navigation';
+import { socialMediaItemsData } from '../data/navigationItems';
 
 let wrapper: any;
 beforeEach(() => {

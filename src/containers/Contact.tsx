@@ -1,10 +1,10 @@
 import React from 'react';
 
-import useContactState from '../../hooks/useContactState';
-import { Heading } from '../../common/components/Heading';
-import { Input } from '../../common/components/Input';
-import { Button } from '../../common/components/Button';
-import { SvgIcon } from '../../common/components/SvgIcon';
+import useContactState from '../hooks/useContactState';
+import { Heading } from '../common/components/Heading';
+import { Input } from '../common/components/Input';
+import { Button } from '../common/components/Button';
+import { SvgIcon } from '../common/components/SvgIcon';
 
 export const Contact = () => {
   const {

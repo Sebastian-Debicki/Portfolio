@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Heading } from '../../common/components/Heading';
-import { SvgIcon } from '../../common/components/SvgIcon';
-import { Technology } from '../../common/models/Technology';
+import { Heading } from '../common/components/Heading';
+import { SvgIcon } from '../common/components/SvgIcon';
+import { Technology } from '../common/models/Technology';
 
 interface Props {
   technologies: Technology[];

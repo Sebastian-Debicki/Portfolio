@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Carousel } from 'react-responsive-carousel';
 
-import { Slider } from '../Slider';
-import { projects } from '../../mocks/testsDummyData';
+import { Slider } from '../components/Slider';
+import { projects } from '../mocks/projects';
 
 let wrapper: any;
 beforeEach(() => {

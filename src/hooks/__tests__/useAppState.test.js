@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import useAppState from './useAppState';
-import { projects } from '../data/testsDummyData';
+import useAppState from '../useAppState';
+import { projects } from '../../common/mocks/projects';
 
 describe('useAppState', () => {
   it('should toggle menuOpen state from false to true', () => {

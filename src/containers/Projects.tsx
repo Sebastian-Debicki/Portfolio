@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Heading } from '../../common/components/Heading';
-import { Button } from '../../common/components/Button';
-import { Project } from '../../common/models/Project';
+import { Heading } from '../common/components/Heading';
+import { Button } from '../common/components/Button';
+import { Project } from '../common/models/Project';
 
 interface Props {
   projects: Project[];

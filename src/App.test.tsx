@@ -1,16 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
-import Header from './containers/Header/Header';
-import About from './containers/About/About';
-import Projects from './containers/Projects/Projects';
-import Contact from './containers/Contact/Contact';
-import Spinner from './components/UIElements/Spinner/Spinner';
-import Logo from './components/UIElements/Logo/Logo';
-import HamburgerButton from './components/UIElements/HamburgerButton/HamburgerButton';
-import Navigation from './components/Navigation/Navigation';
 
-let wrapper;
+import { App } from './App';
+import { Header } from './containers/Header/Header';
+import { About } from './containers/About/About';
+import { Projects } from './containers/Projects/Projects';
+import { Contact } from './containers/Contact/Contact';
+import { Spinner } from './common/components/Spinner';
+import { Logo } from './common/components/Logo';
+import { HamburgerButton } from './common/components/HamburgerButton';
+import { Navigation } from './common/components/Navigation';
+
+let wrapper: any;
 beforeEach(() => {
   wrapper = shallow(<App />);
 });

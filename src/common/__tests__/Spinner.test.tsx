@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Spinner } from '../Spinner';
+import { Spinner } from '../components/Spinner';
 
 let wrapper: any;
 beforeEach(() => {

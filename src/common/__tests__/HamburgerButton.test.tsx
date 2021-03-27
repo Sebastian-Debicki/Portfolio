@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { HamburgerButton } from '../HamburgerButton';
+import { HamburgerButton } from '../components/HamburgerButton';
 
 let wrapper: any, toggleMenuHandlerMock: any;
 beforeEach(() => {
