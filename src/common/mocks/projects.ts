@@ -45,7 +45,6 @@ export const projects: Project[] = [
     image: '/images/hangman-img-1.jpg',
     githubLink: 'https://github.com/ssebaa9/Hangman-game',
     demoLink: 'https://hangman-game-debicki.firebaseapp.com/',
-    creationDate: '15-11-2019',
     id: '5eda660a45a8b541cc6614bc',
   },
   {
@@ -83,7 +82,6 @@ export const projects: Project[] = [
     image: '/images/companies-table-img-1.jpg',
     githubLink: 'https://github.com/ssebaa9/companies-table',
     demoLink: 'https://tableofcompanies-debicki.web.app/',
-    creationDate: '10-01-2020',
     id: '5eda66fe45a8b541cc6614bd',
   },
   {
@@ -127,7 +125,6 @@ export const projects: Project[] = [
     image: '/images/portfolio-web-img-1.jpg',
     githubLink: 'https://github.com/ssebaa9/Portfolio-vol.2',
     demoLink: 'https://sebastian-debicki.web.app/',
-    creationDate: '08-02-2020',
     id: '5eda69832333570664570112',
   },
   {
@@ -178,7 +175,6 @@ export const projects: Project[] = [
     image: '/images/recepies-app-img-1.jpg',
     githubLink: 'https://github.com/ssebaa9/Recepies-app',
     demoLink: 'https://recepiesapp.web.app/',
-    creationDate: '03-03-2020',
     id: '5eda6a902333570664570113',
   },
 ];

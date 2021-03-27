@@ -7,7 +7,6 @@ export interface Project {
   image: string;
   githubLink: string;
   demoLink: string;
-  creationDate: string;
 }
 
 interface Technology {

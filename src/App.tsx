@@ -12,10 +12,11 @@ import { Backdrop } from './common/components/Backdrop';
 import { Modal } from './common/components/Modal';
 import { ProjectView } from './common/components/ProjectView';
 import { Spinner } from './common/components/Spinner';
+import { projects } from './common/data/projects';
 
 export const App = () => {
   const {
-    projects,
+    // projects,
     technologies,
     project,
     menuOpen,
