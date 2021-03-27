@@ -6,7 +6,7 @@ interface Props {
   name?: string;
   required?: boolean;
   minLength?: number;
-  onChange: () => void;
+  onChange: (e: any) => void;
   value: string;
 }
 
