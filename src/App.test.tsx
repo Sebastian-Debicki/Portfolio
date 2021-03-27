@@ -2,10 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { App } from './App';
-import { Header } from './containers/Header/Header';
-import { About } from './containers/About/About';
-import { Projects } from './containers/Projects/Projects';
-import { Contact } from './containers/Contact/Contact';
+import { Header } from './containers/Header';
+import { About } from './containers/About';
+import { Projects } from './containers/Projects';
+import { Contact } from './containers/Contact';
 import { Spinner } from './common/components/Spinner';
 import { Logo } from './common/components/Logo';
 import { HamburgerButton } from './common/components/HamburgerButton';

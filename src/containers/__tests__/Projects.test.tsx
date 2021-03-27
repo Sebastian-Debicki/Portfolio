@@ -18,6 +18,6 @@ describe('<Projects/>', () => {
   });
 
   it('render one Heading component', () => {
-    expect(wrapper.find(Heading).length).toBe(1);
+    expect(wrapper.find(Heading).length).toBe(5);
   });
 });

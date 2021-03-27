@@ -25,7 +25,7 @@ describe('useAppState', () => {
 
   it('should change modalOpen state from false to true', () => {
     const { result } = renderHook(() => useAppState());
-    act(() => result.current.openModalHandler());
+    act(() => result.current.openModalHandler(projects[0]));
     expect(result.current.modalOpen).toEqual(true);
   });
 
@@ -37,7 +37,7 @@ describe('useAppState', () => {
 
   it('should change modalOpen state from true to false', () => {
     const { result } = renderHook(() => useAppState());
-    act(() => result.current.openModalHandler());
+    act(() => result.current.openModalHandler(projects[0]));
     act(() => result.current.closeModalHandler());
     expect(result.current.modalOpen).toEqual(false);
   });

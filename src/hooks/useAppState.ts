@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import { Project } from '../common/models/Project';
+
 const useAppState = () => {
   const [projects, setProjects] = useState([]);
   const [technologies, setTechnologies] = useState([]);
-  const [project, setProject] = useState(null);
+  const [project, setProject] = useState<Project | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [loadingTimer, setLoadingTimer] = useState(1000);
   const toggleMenuHandler = () => setMenuOpen(!menuOpen);
   const closeMenuHandler = () => setMenuOpen(false);
-  const openModalHandler = (project) => {
+  const openModalHandler = (project: Project) => {
     setModalOpen(true);
     setProject(project);
   };

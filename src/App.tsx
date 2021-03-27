@@ -1,10 +1,10 @@
 import React from 'react';
 
 import useAppState from './hooks/useAppState';
-import { Header } from './containers/Header/Header';
-import { About } from './containers/About/About';
-import { Projects } from './containers/Projects/Projects';
-import { Contact } from './containers/Contact/Contact';
+import { Header } from './containers/Header';
+import { About } from './containers/About';
+import { Projects } from './containers/Projects';
+import { Contact } from './containers/Contact';
 import { Logo } from './common/components/Logo';
 import { HamburgerButton } from './common/components/HamburgerButton';
 import { Navigation } from './common/components/Navigation';

@@ -7,7 +7,7 @@ let wrapper: any, toggleMenuHandlerMock: any;
 beforeEach(() => {
   toggleMenuHandlerMock = jest.fn();
   wrapper = shallow(
-    <HamburgerButton toggleMenuHandler={toggleMenuHandlerMock} open={true} />
+    <HamburgerButton toggleMenuHandler={toggleMenuHandlerMock} open={false} />
   );
 });
 

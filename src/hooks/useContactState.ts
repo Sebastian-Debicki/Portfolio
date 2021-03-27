@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import axios from 'axios';
 
 const useContactState = () => {
@@ -8,7 +8,7 @@ const useContactState = () => {
   const [messageValue, setMessageValue] = useState('');
   const [showSentMessageIcon, setShowSetMessageIcon] = useState(false);
 
-  const formSubmitionHandler = (e) => {
+  const formSubmitionHandler = (e: FormEvent) => {
     e.preventDefault();
     axios.post(`${process.env.REACT_APP_ASSET_URL}/sendEmail`, {
       email: emailValue,
@@ -27,10 +27,14 @@ const useContactState = () => {
     }, 5500);
   };
 
-  const changeEmailInputHandler = (e) => setEmailValue(e.target.value);
-  const changeNameInputHandler = (e) => setNameValue(e.target.value);
-  const changeTitleInputHandler = (e) => setTitleValue(e.target.value);
-  const changeMessageInputHandler = (e) => setMessageValue(e.target.value);
+  const changeEmailInputHandler = (e: Event) =>
+    setEmailValue((e.target as HTMLInputElement).value);
+  const changeNameInputHandler = (e: Event) =>
+    setNameValue((e.target as HTMLInputElement).value);
+  const changeTitleInputHandler = (e: Event) =>
+    setTitleValue((e.target as HTMLInputElement).value);
+  const changeMessageInputHandler = (e: Event) =>
+    setMessageValue((e.target as HTMLInputElement).value);
 
   return {
     emailValue,

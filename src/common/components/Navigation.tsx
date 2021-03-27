@@ -14,7 +14,7 @@ interface Props {
 
 export const Navigation: React.FC<Props> = ({ open, closeMenuHandler }) => {
   const navigationItems = navigationItemsData.map((item) => (
-    <li className="navigation__menu-item">
+    <li className="navigation__menu-item" key={item.name}>
       <Link
         className="navigation__menu-link"
         to={item.name}
