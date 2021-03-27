@@ -1,4 +1,4 @@
-export const navigationItemsData = [
+export const routes = [
   {
     id: 1,
     name: 'home',
@@ -21,7 +21,7 @@ export const navigationItemsData = [
   },
 ];
 
-export const socialMediaItemsData = [
+export const social = [
   {
     name: 'github',
     icon: 'github',

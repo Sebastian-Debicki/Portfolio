@@ -1,5 +1,5 @@
 import { Project } from '../../models/Project';
-import { technologyTypes } from '../technologyTypes';
+import { technologyTypes } from '../technologies';
 
 import img1 from '../../../assets/images/projects/hangman-img-1.jpg';
 import img2 from '../../../assets/images/projects/hangman-img-2.jpg';
@@ -19,7 +19,6 @@ export const hangmanGame: Project = {
     technologyTypes.firebase,
   ],
   images: [img1, img2, img3, img4, img5, img6],
-  id: '1',
   title: 'Hangman Game',
   description: 'Try to guess the word.',
   image: img1,

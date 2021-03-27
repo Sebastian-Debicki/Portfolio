@@ -1,5 +1,5 @@
 import { Project } from '../../models/Project';
-import { technologyTypes } from '../technologyTypes';
+import { technologyTypes } from '../technologies';
 
 import img1 from '../../../assets/images/projects/shop-img-1.jpg';
 import img2 from '../../../assets/images/projects/shop-img-2.jpg';
@@ -19,7 +19,6 @@ export const shop: Project = {
     technologyTypes.firebase,
   ],
   images: [img1, img2, img3, img4, img5, img6],
-  id: '4',
   title: 'Shop',
   description:
     'You can add products to the shopping cart. In the shopping cart you can increase or decrease product order amount, you can also delete product from cart.',

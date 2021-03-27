@@ -7,9 +7,9 @@ import { recipes } from './projects/recipes';
 import { shop } from './projects/shop';
 
 export const projects: Project[] = [
-  hangmanGame,
-  portfolio,
-  recipes,
-  shop,
   dragonSlayer,
+  shop,
+  recipes,
+  portfolio,
+  hangmanGame,
 ];

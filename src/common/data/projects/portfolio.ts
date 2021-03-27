@@ -1,5 +1,5 @@
 import { Project } from '../../models/Project';
-import { technologyTypes } from '../technologyTypes';
+import { technologyTypes } from '../technologies';
 
 import img1 from '../../../assets/images/projects/portfolio-web-img-1.jpg';
 import img2 from '../../../assets/images/projects/portfolio-web-img-2.jpg';
@@ -20,7 +20,6 @@ export const portfolio: Project = {
     technologyTypes.firebase,
   ],
   images: [img1, img2, img3, img4, img5, img6, img7],
-  id: '2',
   title: 'Old portfolio',
   description: 'Old version of portfolio website.',
   image: img1,

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import { Projects } from '../Projects';
 import { Heading } from '../../common/components/Heading';
-import { projects } from '../../common/mocks/projects';
+import { projects } from '../../common/data/projects';
 
 let wrapper: any;
 beforeEach(() => {

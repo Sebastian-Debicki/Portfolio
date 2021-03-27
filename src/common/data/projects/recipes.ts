@@ -1,5 +1,5 @@
 import { Project } from '../../models/Project';
-import { technologyTypes } from '../technologyTypes';
+import { technologyTypes } from '../technologies';
 
 import img1 from '../../../assets/images/projects/recepies-app-img-1.jpg';
 import img2 from '../../../assets/images/projects/recepies-app-img-2.jpg';
@@ -23,7 +23,6 @@ export const recipes: Project = {
     technologyTypes.firebase,
   ],
   images: [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10],
-  id: '3',
   title: 'Recipes App',
   description: 'A place where you can store your recepies.',
   image: img1,

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { About } from '../About';
-import { technologies } from '../../common/mocks/technologies';
+import { technologies } from '../../common/data/technologies';
 import { Heading } from '../../common/components/Heading';
 
 let wrapper: any;

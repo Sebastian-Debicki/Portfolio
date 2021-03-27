@@ -1,5 +1,5 @@
 import { Project } from '../../models/Project';
-import { technologyTypes } from '../technologyTypes';
+import { technologyTypes } from '../technologies';
 
 import img1 from '../../../assets/images/projects/dragon-slayer-img-1.jpg';
 import img2 from '../../../assets/images/projects/dragon-slayer-img-2.jpg';
@@ -24,7 +24,6 @@ export const dragonSlayer: Project = {
     technologyTypes.firebase,
   ],
   images: [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11],
-  id: '5',
   title: 'Dragon Slayer',
   description:
     'You can choose from three avalible heroes - Warrior, Wizard and Ninja. Every hero has them own statistics which are increased by collecting experience in fighting. Enjoy the game!',
