@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import * as config from './core/config';
 import { Header } from './containers/Header';
 import { About } from './containers/About';
 import { Projects } from './containers/Projects';
@@ -15,20 +16,18 @@ import { projects } from './common/data/projects';
 import { technologies } from './common/data/technologies';
 import { Project } from './common/models/Project';
 
-const LOADING_TIME = 1500;
-
 export const App = () => {
   const [project, setProject] = useState<Project | undefined>();
   const [menuOpen, setMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), LOADING_TIME);
+    setTimeout(() => setLoading(false), config.LOADING_TIME);
   }, []);
 
   return (
     <>
-      {loading && <Spinner loadingTimer={LOADING_TIME} />}
+      {loading && <Spinner loadingTime={config.LOADING_TIME} />}
       <Logo />
       <HamburgerButton
         toggleMenuHandler={() => setMenuOpen(!menuOpen)}
@@ -48,7 +47,7 @@ export const App = () => {
       )}
 
       <main className="layout">
-        <Header loadingTimer={LOADING_TIME} />
+        <Header loadingTime={config.LOADING_TIME} />
         <About technologies={technologies} loading={loading} />
         <Projects
           openModalHandler={(project) => setProject(project)}
