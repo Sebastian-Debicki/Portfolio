@@ -4,16 +4,16 @@ import { TimelineMax, Linear, Power3, gsap } from 'gsap';
 gsap.registerPlugin(TimelineMax, Linear);
 
 interface Props {
-  loadingTimer: number;
+  loadingTime: number;
 }
 
-export const Spinner: React.FC<Props> = ({ loadingTimer }) => {
+export const Spinner: React.FC<Props> = ({ loadingTime }) => {
   let progressBar = useRef<HTMLSpanElement | null>(null).current;
   let spinner = useRef<HTMLDivElement | null>(null).current;
 
   useEffect(() => {
     const tl = new TimelineMax();
-    tl.to(progressBar, loadingTimer / 1000, {
+    tl.to(progressBar, loadingTime / 1000, {
       transform: 'translateY(0)',
       ease: Linear.easeNone,
     }).to(spinner, 0.7, {
@@ -21,7 +21,7 @@ export const Spinner: React.FC<Props> = ({ loadingTimer }) => {
       delay: 0.1,
       ease: Power3.easeInOut,
     });
-  }, [loadingTimer, progressBar, spinner]);
+  }, [loadingTime, progressBar, spinner]);
 
   return (
     <div className="spinner" ref={(el) => (spinner = el)}>

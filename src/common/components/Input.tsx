@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  type: string;
+  type: 'input' | 'textarea';
   inputType?: string;
   name?: string;
   required?: boolean;
@@ -19,38 +19,33 @@ export const Input: React.FC<Props> = ({
   onChange,
   value,
 }) => {
-  let input;
-  switch (type) {
-    case 'input':
-      input = (
-        <input
-          className="input"
-          type={inputType}
-          id={name}
-          placeholder={name}
-          required={required}
-          minLength={minLength}
-          onChange={onChange}
-          value={value}
-        />
-      );
-      break;
-    case 'textarea':
-      input = (
-        <textarea
-          className="input"
-          id={name}
-          placeholder={name}
-          cols={30}
-          rows={10}
-          required={required}
-          minLength={minLength}
-          onChange={onChange}
-          value={value}
-        ></textarea>
-      );
-      break;
-  }
+  const input = {
+    input: (
+      <input
+        className="input"
+        type={inputType}
+        id={name}
+        placeholder={name}
+        required={required}
+        minLength={minLength}
+        onChange={onChange}
+        value={value}
+      />
+    ),
+    textarea: (
+      <textarea
+        className="input"
+        id={name}
+        placeholder={name}
+        cols={30}
+        rows={10}
+        required={required}
+        minLength={minLength}
+        onChange={onChange}
+        value={value}
+      ></textarea>
+    ),
+  }[type];
 
   return (
     <div className="input-box">

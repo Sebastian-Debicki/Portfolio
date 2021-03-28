@@ -6,10 +6,10 @@ import { Heading } from '../common/components/Heading';
 gsap.registerPlugin(TimelineMax, Power3);
 
 interface Props {
-  loadingTimer: number;
+  loadingTime: number;
 }
 
-export const Header: React.FC<Props> = ({ loadingTimer }) => {
+export const Header: React.FC<Props> = ({ loadingTime }) => {
   let imageBox = useRef<HTMLDivElement | null>(null).current;
   let headingBox = useRef<HTMLDivElement | null>(null).current;
 
@@ -18,14 +18,14 @@ export const Header: React.FC<Props> = ({ loadingTimer }) => {
     tl.set(imageBox, { visibility: 'visible' });
     tl.to(imageBox, 1, {
       opacity: 1,
-      delay: (loadingTimer + 800) / 1000,
+      delay: (loadingTime + 800) / 1000,
       ease: Power3.easeOut,
     }).to(headingBox, 2, {
       opacity: 1,
       ease: Power3.easeOut,
       x: 0,
     });
-  }, [loadingTimer, imageBox, headingBox]);
+  }, [loadingTime, imageBox, headingBox]);
 
   return (
     <header className="header" id="home">
