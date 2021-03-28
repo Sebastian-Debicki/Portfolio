@@ -22,7 +22,7 @@ export const Input: React.FC<Props> = ({
   const input = {
     input: (
       <input
-        className="input"
+        className='input'
         type={inputType}
         id={name}
         placeholder={name}
@@ -34,7 +34,7 @@ export const Input: React.FC<Props> = ({
     ),
     textarea: (
       <textarea
-        className="input"
+        className='input'
         id={name}
         placeholder={name}
         cols={30}
@@ -48,9 +48,9 @@ export const Input: React.FC<Props> = ({
   }[type];
 
   return (
-    <div className="input-box">
+    <div className='input-box'>
       {input}
-      <label className="label" htmlFor={name}>
+      <label className='label' htmlFor={name}>
         {name}
       </label>
     </div>

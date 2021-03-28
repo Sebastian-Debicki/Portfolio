@@ -9,9 +9,9 @@ interface Props {
 export const Modal: React.FC<Props> = ({ children, onClose }) => {
   return (
     <>
-      <Backdrop onClose={onClose} backdropName="modal" />
-      <div className="modal">
-        <Button type="special--close" onClick={onClose}>
+      <Backdrop onClose={onClose} backdropName='modal' />
+      <div className='modal'>
+        <Button type='special--close' onClick={onClose}>
           +
         </Button>
         {children}

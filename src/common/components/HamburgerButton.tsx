@@ -12,11 +12,11 @@ export const HamburgerButton: React.FC<Props> = ({
   return (
     <button
       className={`hamburger${open ? ' hamburger--active' : ''}`}
-      type="button"
+      type='button'
       onClick={toggleMenuHandler}
     >
-      <span className="hamburger__box">
-        <span className="hamburger__inner"></span>
+      <span className='hamburger__box'>
+        <span className='hamburger__inner'></span>
       </span>
     </button>
   );

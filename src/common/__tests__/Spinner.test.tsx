@@ -5,7 +5,7 @@ import { Spinner } from '../components/Spinner';
 
 let wrapper: any;
 beforeEach(() => {
-  wrapper = shallow(<Spinner loadingTimer={1000} />);
+  wrapper = shallow(<Spinner loadingTime={1000} />);
 });
 
 describe('<Spinner/>', () => {

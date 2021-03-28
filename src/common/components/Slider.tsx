@@ -8,13 +8,13 @@ interface Props {
 
 export const Slider: React.FC<Props> = ({ images }) => {
   const imagesList = images.map((image) => (
-    <div className="slider__image-box" key={image}>
+    <div className='slider__image-box' key={image}>
       <img src={image} alt={image} />
     </div>
   ));
 
   return (
-    <div className="slider">
+    <div className='slider'>
       <Carousel
         showIndicators={false}
         showThumbs={false}

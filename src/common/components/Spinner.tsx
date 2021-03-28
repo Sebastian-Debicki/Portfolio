@@ -24,13 +24,13 @@ export const Spinner: React.FC<Props> = ({ loadingTime }) => {
   }, [loadingTime, progressBar, spinner]);
 
   return (
-    <div className="spinner" ref={(el) => (spinner = el)}>
-      <div className="spinner__box">
-        <p className="spinner__text-main">Loading...</p>
-        <p className="spinner__text-sub">Dębicki Portfolio</p>
-        <div className="spinner__progress-bar">
+    <div className='spinner' ref={(el) => (spinner = el)}>
+      <div className='spinner__box'>
+        <p className='spinner__text-main'>Loading...</p>
+        <p className='spinner__text-sub'>Dębicki Portfolio</p>
+        <div className='spinner__progress-bar'>
           <span
-            className="spinner__progress-bar__bar"
+            className='spinner__progress-bar__bar'
             ref={(el) => (progressBar = el)}
           ></span>
         </div>

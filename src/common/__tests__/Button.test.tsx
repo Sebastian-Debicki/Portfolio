@@ -7,7 +7,7 @@ let wrapper: any, onClickMock: any;
 beforeEach(() => {
   onClickMock = jest.fn();
   wrapper = shallow(
-    <Button type="primary" onClick={onClickMock}>
+    <Button type='primary' onClick={onClickMock}>
       button-name
     </Button>
   );

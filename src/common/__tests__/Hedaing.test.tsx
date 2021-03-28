@@ -4,7 +4,7 @@ import { Heading } from '../components/Heading';
 
 let wrapper: any;
 beforeEach(() => {
-  wrapper = shallow(<Heading type="primary">some-heading</Heading>);
+  wrapper = shallow(<Heading type='primary'>some-heading</Heading>);
 });
 
 describe('<Heading/>', () => {

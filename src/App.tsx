@@ -37,7 +37,7 @@ export const App = () => {
       {menuOpen && (
         <Backdrop
           onClose={() => setMenuOpen(false)}
-          backdropName="navigation"
+          backdropName='navigation'
         />
       )}
       {project && (
@@ -46,7 +46,7 @@ export const App = () => {
         </Modal>
       )}
 
-      <main className="layout">
+      <main className='layout'>
         <Header loadingTime={config.LOADING_TIME} />
         <About technologies={technologies} loading={loading} />
         <Projects

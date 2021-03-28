@@ -28,11 +28,11 @@ export const Header: React.FC<Props> = ({ loadingTime }) => {
   }, [loadingTime, imageBox, headingBox]);
 
   return (
-    <header className="header" id="home">
-      <div ref={(el) => (headingBox = el)} className="header__heading-box">
-        <Heading type="primary">Primary</Heading>
+    <header className='header' id='home'>
+      <div ref={(el) => (headingBox = el)} className='header__heading-box'>
+        <Heading type='primary'>Primary</Heading>
       </div>
-      <div className="header__img-box" ref={(el) => (imageBox = el)}></div>
+      <div className='header__img-box' ref={(el) => (imageBox = el)}></div>
     </header>
   );
 };
