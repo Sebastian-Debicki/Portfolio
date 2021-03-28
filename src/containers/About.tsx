@@ -21,7 +21,7 @@ export const About: React.FC<Props> = ({ technologies, loading }) => {
         {!loading && technologies && (
           <ul className="technologies__list">
             {technologies.map((tech) => (
-              <li className="technologies__item" key={tech.id}>
+              <li className="technologies__item" key={tech.name}>
                 <SvgIcon iconName={tech.icon} className="technologies__icon" />
                 <span className="technologies__icon-name">{tech.name}</span>
               </li>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { projects } from '../mocks/projects';
+import { projects } from '../data/projects';
 import { ProjectView } from '../components/ProjectView';
 import { Heading } from '../components/Heading';
 import { Slider } from '../components/Slider';

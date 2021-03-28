@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { Navigation } from '../components/Navigation';
-import { socialMediaItemsData } from '../data/navigationItems';
+import { social } from '../data/navigation';
 
 let wrapper: any;
 beforeEach(() => {
@@ -19,9 +19,7 @@ describe('<Navigation/>', () => {
   });
 
   it('has a correct number of social media links', () => {
-    expect(wrapper.find('.navigation__social-item').length).toBe(
-      socialMediaItemsData.length
-    );
+    expect(wrapper.find('.navigation__social-item').length).toBe(social.length);
   });
 
   it('nav has a correct className by default', () => {

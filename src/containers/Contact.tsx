@@ -1,24 +1,39 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
+import emailjs from 'emailjs-com';
 
-import useContactState from '../hooks/useContactState';
 import { Heading } from '../common/components/Heading';
 import { Input } from '../common/components/Input';
 import { Button } from '../common/components/Button';
-import { SvgIcon } from '../common/components/SvgIcon';
 
 export const Contact = () => {
-  const {
-    emailValue,
-    nameValue,
-    titleValue,
-    messageValue,
-    changeEmailInputHandler,
-    changeNameInputHandler,
-    changeTitleInputHandler,
-    changeMessageInputHandler,
-    formSubmitionHandler,
-    showSentMessageIcon,
-  } = useContactState();
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('');
+
+  const sendEmail = (e: FormEvent) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        'service_mf3xaxq',
+        'template_0c8ykfd',
+        {
+          name,
+          title,
+          email,
+          message,
+        },
+        'user_g20yo9uzVTrxwnYMfYlEq'
+      )
+      .then(() => {
+        setEmail('');
+        setName('');
+        setTitle('');
+        setMessage('');
+      })
+      .catch((err) => console.error(err));
+  };
 
   return (
     <section className="contact">
@@ -28,13 +43,7 @@ export const Contact = () => {
         </Heading>
       </div>
 
-      <form className="contact__form" onSubmit={formSubmitionHandler}>
-        {showSentMessageIcon && (
-          <SvgIcon
-            iconName="checkmark-outline"
-            className="contact__message-sent-icon"
-          />
-        )}
+      <form className="contact__form" onSubmit={sendEmail}>
         <div className="contact__info">
           <ul className="contact__info__list">
             <li className="contact__info__item">Sebastian Dębicki</li>
@@ -45,23 +54,23 @@ export const Contact = () => {
         </div>
 
         <Input
-          value={emailValue}
-          onChange={changeEmailInputHandler}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           type="input"
           inputType="email"
           name="Email"
           required
         />
         <Input
-          value={nameValue}
-          onChange={changeNameInputHandler}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           type="input"
           inputType="text"
           name="Name"
         />
         <Input
-          value={titleValue}
-          onChange={changeTitleInputHandler}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
           type="input"
           inputType="text"
           name="Title"
@@ -69,8 +78,8 @@ export const Contact = () => {
           minLength={3}
         />
         <Input
-          value={messageValue}
-          onChange={changeMessageInputHandler}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           type="textarea"
           name="Message"
           required

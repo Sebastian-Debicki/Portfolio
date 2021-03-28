@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-import {
-  navigationItemsData,
-  socialMediaItemsData,
-} from '../data/navigationItems';
+import { routes, social } from '../data/navigation';
 import { SvgIcon } from './SvgIcon';
 
 interface Props {
@@ -13,7 +10,7 @@ interface Props {
 }
 
 export const Navigation: React.FC<Props> = ({ open, closeMenuHandler }) => {
-  const navigationItems = navigationItemsData.map((item) => (
+  const navigationItems = routes.map((item) => (
     <li className="navigation__menu-item" key={item.name}>
       <Link
         className="navigation__menu-link"
@@ -28,7 +25,7 @@ export const Navigation: React.FC<Props> = ({ open, closeMenuHandler }) => {
     </li>
   ));
 
-  const socialMediaItems = socialMediaItemsData.map((item) => (
+  const socialMediaItems = social.map((item) => (
     <li className="navigation__social-item" key={item.name}>
       <a href={item.link} className="navigation__social-link">
         <SvgIcon iconName={item.icon} className="navigation__social-icon" />

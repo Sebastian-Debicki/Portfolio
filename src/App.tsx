@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import useAppState from './hooks/useAppState';
 import { Header } from './containers/Header';
 import { About } from './containers/About';
 import { Projects } from './containers/Projects';
@@ -12,41 +11,49 @@ import { Backdrop } from './common/components/Backdrop';
 import { Modal } from './common/components/Modal';
 import { ProjectView } from './common/components/ProjectView';
 import { Spinner } from './common/components/Spinner';
+import { projects } from './common/data/projects';
+import { technologies } from './common/data/technologies';
+import { Project } from './common/models/Project';
+
+const LOADING_TIME = 1500;
 
 export const App = () => {
-  const {
-    projects,
-    technologies,
-    project,
-    menuOpen,
-    modalOpen,
-    loading,
-    loadingTimer,
-    toggleMenuHandler,
-    closeMenuHandler,
-    openModalHandler,
-    closeModalHandler,
-  } = useAppState();
+  const [project, setProject] = useState<Project | undefined>();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), LOADING_TIME);
+  }, []);
 
   return (
     <>
-      {loading && <Spinner loadingTimer={loadingTimer} />}
+      {loading && <Spinner loadingTimer={LOADING_TIME} />}
       <Logo />
-      <HamburgerButton toggleMenuHandler={toggleMenuHandler} open={menuOpen} />
-      <Navigation open={menuOpen} closeMenuHandler={closeMenuHandler} />
+      <HamburgerButton
+        toggleMenuHandler={() => setMenuOpen(!menuOpen)}
+        open={menuOpen}
+      />
+      <Navigation open={menuOpen} closeMenuHandler={() => setMenuOpen(false)} />
       {menuOpen && (
-        <Backdrop onClose={closeMenuHandler} backdropName="navigation" />
+        <Backdrop
+          onClose={() => setMenuOpen(false)}
+          backdropName="navigation"
+        />
       )}
-      {modalOpen && (
-        <Modal onClose={closeModalHandler}>
+      {project && (
+        <Modal onClose={() => setProject(undefined)}>
           <ProjectView project={project} />
         </Modal>
       )}
 
       <main className="layout">
-        <Header loadingTimer={loadingTimer} />
+        <Header loadingTimer={LOADING_TIME} />
         <About technologies={technologies} loading={loading} />
-        <Projects openModalHandler={openModalHandler} projects={projects} />
+        <Projects
+          openModalHandler={(project) => setProject(project)}
+          projects={projects}
+        />
         <Contact />
       </main>
     </>

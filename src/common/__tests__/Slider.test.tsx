@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { Carousel } from 'react-responsive-carousel';
 
 import { Slider } from '../components/Slider';
-import { projects } from '../mocks/projects';
+import { projects } from '../data/projects';
 
 let wrapper: any;
 beforeEach(() => {
