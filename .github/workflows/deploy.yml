@@ -2,22 +2,52 @@ name: deploy
 
 on:
   push:
-    branches:
-      - master
+    branches: [develop]
+  pull_request:
+    branches: [develop]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build and test
+        run: |
+          npm install
+          npm run test
+          npm run build
+      - name: Archive Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+
   deploy:
+    name: Deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm run test && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Download Build
+        uses: actions/download-artifact@v2
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
-          projectId: your-Firebase-project-ID
-          channelId: live
+          name: build
+          path: build
+      - name: Depoy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
         env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           REACT_APP_EMAIL_SERVICE: ${{ secrets.EMAIL_SERVICE }}
           REACT_APP_EMAIL_TEMPLATE: ${{ secrets.EMAIL_TEMPLATE }}
           REACT_APP_EMAIL_USER: ${{ secrets.EMAIL_USER }}
