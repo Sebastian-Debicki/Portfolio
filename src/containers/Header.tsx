@@ -18,7 +18,7 @@ export const Header: React.FC<Props> = ({ loadingTime }) => {
     tl.set(imageBox, { visibility: 'visible' });
     tl.to(imageBox, 1, {
       opacity: 1,
-      delay: (loadingTime + 800) / 1000,
+      delay: (loadingTime + 300) / 1000,
       ease: Power3.easeOut,
     }).to(headingBox, 2, {
       opacity: 1,
