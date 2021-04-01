@@ -3,13 +3,13 @@ import React from 'react';
 import { Heading } from '../common/components/Heading';
 import { Button } from '../common/components/Button';
 import { Project } from '../common/models/Project';
+import { projects } from '../common/data/projects';
 
 interface Props {
-  projects: Project[];
   openModalHandler: (project: Project) => void;
 }
 
-export const Projects: React.FC<Props> = ({ projects, openModalHandler }) => (
+export const Projects: React.FC<Props> = ({ openModalHandler }) => (
   <section className='projects' id='projects'>
     <div className='u-center u-margin-bottom-small'>
       <Heading type='secondary'>

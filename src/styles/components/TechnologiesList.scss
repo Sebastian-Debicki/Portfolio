@@ -80,6 +80,16 @@
     top: 20%;
     left: 50%;
   }
+
+  &:nth-of-type(11) {
+    top: 50%;
+    left: 0;
+  }
+
+  &:nth-of-type(12) {
+    top: 50%;
+    left: 100%;
+  }
 }
 
 .technologies__icon {
