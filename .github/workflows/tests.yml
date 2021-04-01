@@ -1,14 +1,15 @@
 name: tests
 
-on:
-  push:
-    branches:
-      - master
-      - develop
+on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm install && npm run test
+      - name: install
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: tests
+        run: npm run test

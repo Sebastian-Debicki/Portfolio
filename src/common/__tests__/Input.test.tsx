@@ -8,12 +8,12 @@ beforeEach(() => {
   onChangeMock = jest.fn();
   wrapper = shallow(
     <Input
-      type="input"
+      type='input'
       onChange={onChangeMock}
-      value="some-value"
-      inputType="email"
+      value='some-value'
+      inputType='email'
       required={true}
-      name="Email"
+      name='Email'
       minLength={6}
     />
   );

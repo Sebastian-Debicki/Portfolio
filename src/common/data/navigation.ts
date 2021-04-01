@@ -25,7 +25,7 @@ export const social = [
   {
     name: 'github',
     icon: 'github',
-    link: 'https://github.com/ssebaa9',
+    link: 'https://github.com/Sebastian-Debicki',
   },
   {
     name: 'linkedin',

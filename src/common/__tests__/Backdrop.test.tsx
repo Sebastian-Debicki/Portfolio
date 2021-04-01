@@ -6,7 +6,7 @@ import { Backdrop } from '../components/Backdrop';
 let wrapper: any, onCloseMock: any;
 beforeEach(() => {
   onCloseMock = jest.fn();
-  wrapper = shallow(<Backdrop backdropName="" onClose={onCloseMock} />);
+  wrapper = shallow(<Backdrop backdropName='' onClose={onCloseMock} />);
 });
 
 describe('<Backdrop/>', () => {

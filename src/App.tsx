@@ -12,8 +12,6 @@ import { Backdrop } from './common/components/Backdrop';
 import { Modal } from './common/components/Modal';
 import { ProjectView } from './common/components/ProjectView';
 import { Spinner } from './common/components/Spinner';
-import { projects } from './common/data/projects';
-import { technologies } from './common/data/technologies';
 import { Project } from './common/models/Project';
 
 export const App = () => {
@@ -27,7 +25,7 @@ export const App = () => {
 
   return (
     <>
-      {loading && <Spinner loadingTime={config.LOADING_TIME} />}
+      {loading && <Spinner />}
       <Logo />
       <HamburgerButton
         toggleMenuHandler={() => setMenuOpen(!menuOpen)}
@@ -37,7 +35,7 @@ export const App = () => {
       {menuOpen && (
         <Backdrop
           onClose={() => setMenuOpen(false)}
-          backdropName="navigation"
+          backdropName='navigation'
         />
       )}
       {project && (
@@ -46,13 +44,10 @@ export const App = () => {
         </Modal>
       )}
 
-      <main className="layout">
-        <Header loadingTime={config.LOADING_TIME} />
-        <About technologies={technologies} loading={loading} />
-        <Projects
-          openModalHandler={(project) => setProject(project)}
-          projects={projects}
-        />
+      <main className='layout'>
+        <Header />
+        <About />
+        <Projects openModalHandler={(project) => setProject(project)} />
         <Contact />
       </main>
     </>

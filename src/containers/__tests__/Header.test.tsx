@@ -6,7 +6,7 @@ import { Heading } from '../../common/components/Heading';
 
 let wrapper: any;
 beforeEach(() => {
-  wrapper = shallow(<Header loadingTimer={1000} />);
+  wrapper = shallow(<Header loadingTime={1000} />);
 });
 
 describe('<Header/>', () => {

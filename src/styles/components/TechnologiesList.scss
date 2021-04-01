@@ -28,6 +28,7 @@
 .technologies__item {
   list-style: none;
   position: absolute;
+  white-space: nowrap;
 
   animation: technologiesRotate 16s infinite linear reverse;
 
@@ -80,6 +81,16 @@
     top: 20%;
     left: 50%;
   }
+
+  &:nth-of-type(11) {
+    top: 50%;
+    left: 0;
+  }
+
+  &:nth-of-type(12) {
+    top: 50%;
+    left: 100%;
+  }
 }
 
 .technologies__icon {
@@ -114,10 +125,6 @@
 
   @include respond(phone-large) {
     font-size: 1rem;
-  }
-
-  @include respond(tab-port) {
-    font-size: 1.2rem;
   }
 }
 

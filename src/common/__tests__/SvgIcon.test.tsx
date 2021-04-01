@@ -5,7 +5,7 @@ import { SvgIcon } from '../components/SvgIcon';
 
 let wrapper: any;
 beforeEach(() => {
-  wrapper = shallow(<SvgIcon className="icon" iconName="some-icon" />);
+  wrapper = shallow(<SvgIcon className='icon' iconName='some-icon' />);
 });
 
 describe('<SvgIcon/>', () => {

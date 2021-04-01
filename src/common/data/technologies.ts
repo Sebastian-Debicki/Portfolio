@@ -41,6 +41,14 @@ export const technologyTypes = {
     name: 'Git',
     icon: 'git',
   },
+  typescript: {
+    name: 'TypeScript',
+    icon: 'typescript',
+  },
+  reactnative: {
+    name: 'React Native',
+    icon: 'react',
+  },
 };
 
 export const technologies: Technology[] = [
@@ -54,4 +62,6 @@ export const technologies: Technology[] = [
   technologyTypes.mongodb,
   technologyTypes.git,
   technologyTypes.firebase,
+  technologyTypes.typescript,
+  technologyTypes.reactnative,
 ];
